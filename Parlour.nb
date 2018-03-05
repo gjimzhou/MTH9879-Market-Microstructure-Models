@@ -1,0 +1,1362 @@
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[         0,          0]
+NotebookDataLength[     48111,       1361]
+NotebookOptionsPosition[     42739,       1173]
+NotebookOutlinePosition[     43229,       1192]
+CellTagsIndexPosition[     43186,       1189]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["The Parlour (1998) Model", "Title",
+ CellChangeTimes->{{3.504786770250457*^9, 3.50478678062144*^9}}],
+
+Cell["3 - step case", "Subtitle",
+ CellChangeTimes->{{3.504786790978615*^9, 3.504786813003066*^9}, {
+  3.504790678097446*^9, 3.5047906782759953`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Parameters", "Section",
+ CellChangeTimes->{{3.50478686708492*^9, 3.5047868717276707`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"v", "=", 
+   RowBox[{"11", "/", "2"}]}], ";", " ", 
+  RowBox[{"a", "=", "6"}], ";", " ", 
+  RowBox[{"b", "=", "5"}], ";"}]], "Input",
+ CellChangeTimes->{{3.504786890474021*^9, 3.504786914027959*^9}, {
+  3.504787580171324*^9, 3.504787607710779*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"p", "[", "\[Beta]_", "]"}], "=", 
+  RowBox[{"PDF", "[", 
+   RowBox[{
+    RowBox[{"UniformDistribution", "[", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "2"}], "}"}], "]"}], ",", "\[Beta]"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.504787003428112*^9, 3.504787006662912*^9}, {
+  3.5047870439557533`*^9, 3.5047870614833384`*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\[Piecewise]", GridBox[{
+       {
+        FractionBox["1", "2"], 
+        RowBox[{"0", "\[LessEqual]", "\[Beta]", "\[LessEqual]", "2"}]},
+       {"0", 
+        TagBox["True",
+         "PiecewiseDefault",
+         AutoDelete->True]}
+      },
+      AllowedDimensions->{2, Automatic},
+      Editable->True,
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{
+       "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.84]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}},
+      Selectable->True]}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxItemSize->{
+    "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[0.35]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  "Piecewise",
+  DeleteWithContents->True,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.504787067138381*^9, 3.505330682003189*^9, 
+  3.506539666358952*^9, 3.5065397152126102`*^9, 3.537642593863493*^9, 
+  3.569083581800198*^9, 3.600258368514674*^9, 3.600258429296886*^9, 
+  3.696091577513826*^9, 3.6960917507084208`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pr", "[", "\[Beta]_", "]"}], "=", 
+  RowBox[{"CDF", "[", 
+   RowBox[{
+    RowBox[{"UniformDistribution", "[", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "2"}], "}"}], "]"}], ",", "\[Beta]"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.504787003428112*^9, 3.504787006662912*^9}, {
+  3.5047870439557533`*^9, 3.5047870614833384`*^9}, {3.504787106796639*^9, 
+  3.5047871133888903`*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\[Piecewise]", GridBox[{
+       {
+        FractionBox["\[Beta]", "2"], 
+        RowBox[{"0", "\[LessEqual]", "\[Beta]", "\[LessEqual]", "2"}]},
+       {"1", 
+        RowBox[{"\[Beta]", ">", "2"}]},
+       {"0", 
+        TagBox["True",
+         "PiecewiseDefault",
+         AutoDelete->True]}
+      },
+      AllowedDimensions->{2, Automatic},
+      Editable->True,
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{
+       "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.84]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}},
+      Selectable->True]}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxItemSize->{
+    "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[0.35]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  "Piecewise",
+  DeleteWithContents->True,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.504787114123139*^9, 3.505330682030402*^9, 
+  3.5065396664389677`*^9, 3.506539715254282*^9, 3.537642593902959*^9, 
+  3.569083581839485*^9, 3.600258368554538*^9, 3.600258429335196*^9, 
+  3.696091577539712*^9, 3.696091750733068*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Compute probabilities of events at t=3", "Section",
+ CellChangeTimes->{{3.5047868228700037`*^9, 3.504786824034227*^9}, {
+   3.5047906806161127`*^9, 3.504790680816098*^9}, {3.569080956381933*^9, 
+   3.5690809624086523`*^9}, {3.569083698478706*^9, 3.569083721979814*^9}, {
+   3.569090567695241*^9, 3.5690905678710823`*^9}, 3.600258473389289*^9}],
+
+Cell["\<\
+At the last step, there is no point in sending a limit order at t=T because \
+there is no chance it will be filled.  Thus the only choices at t=T=3 are \
+Market Order or Do Nothing.\
+\>", "Text",
+ CellChangeTimes->{{3.504786831727351*^9, 3.5047868636071672`*^9}, {
+  3.56909059424539*^9, 3.569090669752322*^9}}],
+
+Cell["\<\
+Conditional on being a seller (S), probability of market sell (MS) is given by\
+\>", "Text",
+ CellChangeTimes->{{3.5047875040159397`*^9, 3.50478753574009*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"pr", "[", 
+  RowBox[{"b", "/", "v"}], "]"}]], "Input",
+ CellChangeTimes->{{3.504787556615323*^9, 3.504787569361607*^9}}],
+
+Cell[BoxData[
+ FractionBox["5", "11"]], "Output",
+ CellChangeTimes->{{3.504787570024187*^9, 3.504787612045127*^9}, 
+   3.5053306842496347`*^9, 3.5065396733638906`*^9, 3.506539715287984*^9, 
+   3.53764259395369*^9, 3.569083612025028*^9, 3.5690836573081083`*^9, 
+   3.569090679220161*^9, 3.600258402406528*^9, 3.6002584338727217`*^9, 
+   3.696091577597139*^9, 3.696091750791109*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"b", "/", "v"}], "]"}]], "Input",
+ CellChangeTimes->{{3.504790531948255*^9, 3.504790548296459*^9}}],
+
+Cell[BoxData["0.9090909090909091`"], "Output",
+ CellChangeTimes->{{3.50479053492616*^9, 3.504790548922538*^9}, 
+   3.505330684365877*^9, 3.506539673463953*^9, 3.506539715323667*^9, 
+   3.537642594036478*^9, 3.5690836573750887`*^9, 3.56909067928458*^9, 
+   3.600258437929091*^9, 3.696091577648361*^9, 3.6960917508542137`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pMS", "[", "3", "]"}], "=", 
+  RowBox[{
+   FractionBox["1", "2"], 
+   RowBox[{"pr", "[", 
+    RowBox[{"b", "/", "v"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.504787672416013*^9, 3.5047876929571247`*^9}, {
+  3.504788527139551*^9, 3.504788545834056*^9}, {3.50533066423005*^9, 
+  3.505330664979216*^9}}],
+
+Cell[BoxData[
+ FractionBox["5", "22"]], "Output",
+ CellChangeTimes->{
+  3.504787693609413*^9, {3.504788536510027*^9, 3.504788546840056*^9}, 
+   3.5053306844502497`*^9, 3.506539673547069*^9, 3.506539715375812*^9, 
+   3.537642594120523*^9, 3.569083657411208*^9, 3.569090679322172*^9, 
+   3.600258443621166*^9, 3.6960915776943274`*^9, 3.696091750918827*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pMB", "[", "3", "]"}], "=", 
+  RowBox[{"pMS", "[", "3", "]"}]}]], "Input",
+ CellChangeTimes->{{3.504787699453459*^9, 3.504787709148005*^9}, {
+  3.504788539731659*^9, 3.504788553993145*^9}, {3.505330669351836*^9, 
+  3.505330690926313*^9}}],
+
+Cell[BoxData[
+ FractionBox["5", "22"]], "Output",
+ CellChangeTimes->{
+  3.5047877106021357`*^9, 3.504788554694805*^9, {3.50533068451515*^9, 
+   3.50533069150079*^9}, 3.506539673601317*^9, 3.506539715422297*^9, 
+   3.537642594218053*^9, 3.569083657444173*^9, 3.569090679375566*^9, 
+   3.600258446976305*^9, 3.696091577762995*^9, 3.696091751076025*^9}]
+}, Open  ]],
+
+Cell["The probability of doing nothing is just", "Text",
+ CellChangeTimes->{{3.504787753077194*^9, 3.5047877630767097`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pN", "[", "3", "]"}], "=", 
+  RowBox[{"1", "-", 
+   RowBox[{"pMB", "[", "3", "]"}], "-", 
+   RowBox[{"pMS", "[", "3", "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.504787771861024*^9, 3.504787794021196*^9}, {
+  3.504788557035116*^9, 3.504788565024045*^9}, {3.50533067271981*^9, 
+  3.50533067719967*^9}}],
+
+Cell[BoxData[
+ FractionBox["6", "11"]], "Output",
+ CellChangeTimes->{{3.504787780682187*^9, 3.504787794811022*^9}, 
+   3.504788566327237*^9, {3.505330684604763*^9, 3.5053306951326323`*^9}, 
+   3.5065396736686983`*^9, 3.5065397154758*^9, 3.537642594301117*^9, 
+   3.569083657477277*^9, 3.5690906794740467`*^9, 3.6002584543051023`*^9, 
+   3.696091577829419*^9, 3.696091751132354*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"pMB", "[", "3", "]"}], ",", 
+    RowBox[{"pMS", "[", "3", "]"}]}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.505391702035738*^9, 3.5053917384965887`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.22727272727272727`", ",", "0.22727272727272727`"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.505391738926701*^9, 3.506539673736578*^9, 
+  3.506539715508004*^9, 3.537642594386072*^9, 3.569083657568288*^9, 
+  3.569090679524769*^9, 3.600258459347055*^9, 3.696091577879654*^9, 
+  3.69609175215557*^9}]
+}, Open  ]],
+
+Cell["This looks consistent with Figure 12.3 of Hasbrouck.", "Text",
+ CellChangeTimes->{{3.505391750485059*^9, 3.505391764781166*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Compute probablities of events at t=2", "Section",
+ CellChangeTimes->{{3.504787638731792*^9, 3.504787639952961*^9}, {
+   3.504790683735899*^9, 3.504790683962845*^9}, {3.5690809707203417`*^9, 
+   3.569080985487382*^9}, {3.56908373842669*^9, 3.569083766112846*^9}, 
+   3.600258482280558*^9}],
+
+Cell[CellGroupData[{
+
+Cell["Book empty", "Subsection",
+ CellChangeTimes->{{3.505391512539241*^9, 3.505391517309362*^9}}],
+
+Cell["\<\
+Wlog, focus on seller and consider benefits of alternative actions assuming \
+the ask side of the book is empty.  If there is an existing sell order, it \
+cannot be optimal to submit a limit sell order because such an order will not \
+be executed.\
+\>", "Text",
+ CellChangeTimes->{{3.504787867471199*^9, 3.5047878918060207`*^9}, {
+  3.5047882833062983`*^9, 3.5047882914418488`*^9}, {3.50478958919256*^9, 
+  3.504789662580202*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"benLS", "[", "\[Beta]_", "]"}], "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"a", "-", 
+      RowBox[{"\[Beta]", " ", "v"}]}], ")"}], 
+    RowBox[{"pMB", "[", "3", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"benMS", "[", "\[Beta]_", "]"}], "=", 
+   RowBox[{"b", "-", 
+    RowBox[{"\[Beta]", " ", "v"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.504787838876472*^9, 3.504787864660088*^9}, {
+  3.504787897662956*^9, 3.504787965380425*^9}, {3.504788020707375*^9, 
+  3.5047880302809*^9}, {3.5047885736590033`*^9, 3.5047885748165913`*^9}, {
+  3.505330701863881*^9, 3.50533070203022*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"benLS", "[", "\[Beta]", "]"}], ",", 
+     RowBox[{"benMS", "[", "\[Beta]", "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Beta]", ",", "0", ",", "2"}], "}"}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Red", ",", "Blue"}], "}"}]}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"-", "1"}], ",", "5"}], "}"}]}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<\[Beta]\>\"", ",", "\"\<Benefit\>\""}], "}"}]}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.504787969209599*^9, 3.5047880147539988`*^9}, {
+  3.504788702638431*^9, 3.5047887234195137`*^9}, {3.537647306213663*^9, 
+  3.5376473071010847`*^9}, {3.56908388536548*^9, 3.569083971200379*^9}, {
+  3.569084027406227*^9, 3.5690840502283792`*^9}, {3.569090966860483*^9, 
+  3.569090970865326*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{{}, {}, 
+    TagBox[
+     {RGBColor[1, 0, 0], AbsoluteThickness[1.6], Opacity[1.], 
+      LineBox[CompressedData["
+1:eJwBcQOO/CFib1JlAgAAADYAAAACAAAASmXo0cDpZT5OLWVPdNH1PwRDGnDf
+GUQ/tsEtUlDO9T8zn5icsxlUPx9W9lQsy/U/S83Xsp0ZZD/xfoda5MT1P1dk
+972SGXQ/lNCpZVS49T/dL4dDjRmEP9lz7ns0n/U/oBVPhooZlD9luneo9Gz1
+P4EIsyeJGaQ/fEeKAXUI9T9YWaGv8PG0P9aqXo+NLvQ/C/+BXEcevz/kHd3J
+FmPzPyVR7ujDi8Q/JAmywJ2b8j93zjk/mPTJP489NpM8w/E/F7QR3gEBzz+u
+gWQSTPnwP7biQ8zPPNI/+Q5CbXMe8D/Cap0bWezUP+ko7Agxj+4/9SY9D61t
+1z9KU6iQXP7sPwL5qxAbJdo/AhDDz7dL6z82/2C2U67cPyHsMWj0tek/zIQ0
+zsYq3z+juE15LCjoPx+Q6/mp7uA/fBfIQZR45j/r99/e1TDiP72VlmPd5eQ/
+pOq7yg6O4z9VpsM8VjHjPw4dp+/k5OQ/UaedjsqE4T+MabVmoCTmP2iPl3NA
+6t8/9kCr5Gh/5z/f9LA4S4fcP3QyxLQWw+g/I5lysBhe2T/frsSL0SHqPxli
+8ZZF8dU/+2rUmyl66z/RC8puaZTSPytBB/5mu+w/seiV8p/izj9HoiFnsRfu
+PycDEuUrFcg/dx1fIuFc7z83m948PbvBPyzsVQvXTfA/rum97ngCtz8TD/AI
+xPrwPzpfZj3q/6I/BL+bryOc8T8AerQ1H9yIv2s0u9kJS/I/Q7srMX/FsL+r
+SWKgvvbyP0NkObaeL76/9esaEOaW8z8HCVO4WVnFv7VTRwOURPQ/hxYPOCUi
+zL9/SIWftOb0PzZTPam1O9G/Id1K2KOF9T9eOhnFYVbUvzo3hJQZMvY/3fw3
+cq60179cHs/5AdP2P4SArmw42dq/9cqN4nCB9z+A32f4YkHev5gEXnRSJPg/
+13+8aOW34L8T3rWiAsT4P4wfmNwdR+K/BX2BVDlx+T/oLBWZJvjjvwCpXq/i
+Evo/3Ro+/E2M5b9ymq+NEsL6P3l2CKhFQue/vSuICBFu+z+24SXbQfDovxFK
+ciyCDvw/iC3vtFyB6r/cLdDTebz8PwLnWddHNOy/sJ4/JORe/T8VgXCgUcrt
+v12vNhEd/v0/xira8F9Y779BnhLkKUH+PwAAAAAAAPC/TdK9EA==
+       "]]},
+     Annotation[#, "Charting`Private`Tag$1576#1"]& ], 
+    TagBox[
+     {RGBColor[0, 0, 1], AbsoluteThickness[1.6], Opacity[1.], 
+      LineBox[CompressedData["
+1:eJwBMQLO/SFib1JlAgAAACIAAAACAAAASmXo0cDpZT5wS+/w//8TQARDGnDf
+GUQ/fLuYjYv8E0Azn5icsxlUP4krQioX+RNAS83Xsp0ZZD+jC5VjLvITQFdk
+972SGXQ/1ss61lzkE0DdL4dDjRmEPzxMhru5yBNAoBVPhooZlD8JTR2Gc5ET
+QIEIsyeJGaQ/ok5LG+ciE0BYWaGv8PG0P1Ii6FA1MxJAC/+BXEcevz8V1Aze
+ZVMRQCVR7ujDi8Q/Dgr3U/p3EEB3zjk/mPTJPwchRKrrEw9AF7QR3gEBzz8Y
+6qlbp1cNQLbiQ8zPPNI/I1SRIzF2C0DCap0bWezUP5rGA72CnQlA9SY9D61t
+1z849YUFmeQHQAL5qxAbJdo/z8SJZH0GBkA2/2C2U67cP4tQnXImSARAzIQ0
+zsYq3z+05DtSl5ICQB+Q6/mp7uA/1RlcSNa3AEDr99/e1TDiPzoWGNuz+f0/
+pOq7yg6O4z+8OntSVzn6Pw4dp+/k5OQ/GnD0bIqK9j+MabVmoCTmP8AdjeVG
+G/M/9kCr5Gh/5z+4GlIWP8PuP3QyxLQWw+g/gOrIHQPP5z/frsSL0SHqPzg+
+Rn//ReA/+2rUmyl66z8wZ99NNsDRPytBB/5mu+w/AJmBrZiUrz9HoiFnsRfu
+PyDy49w+Cca/dx1fIuFc7z8gRBZ6rP3YvyzsVQvXTfA/4CWxfD1Y478TD/AI
+xPrwP9ClUGJsxuq/dNFFF1108T8AAAAAAADwvwTVAPQ=
+       "]]},
+     Annotation[#, "Charting`Private`Tag$1576#2"]& ]}, {}, {}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{
+    FormBox["\"\[Beta]\"", TraditionalForm], 
+    FormBox["\"Benefit\"", TraditionalForm]},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, "DefaultMeshStyle" -> 
+    AbsolutePointSize[6], "ScalingFunctions" -> None, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0., 1.9999999591836735`}, {-1, 5}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {0, 0}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.569084050693748*^9, 3.569084243523584*^9, 
+  3.5690906982657967`*^9, 3.5690909717182426`*^9, 3.600258504925723*^9, 
+  3.696091578100947*^9, 3.6960917527874928`*^9}]
+}, Open  ]],
+
+Cell["So, MS is optimal when \[Beta] \[Element](0, x1) with", "Text",
+ CellChangeTimes->{{3.5047882349809017`*^9, 3.504788259192313*^9}, 
+   3.504788403249981*^9, {3.569090712560108*^9, 3.569090765003297*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"x1", "=", 
+  RowBox[{"\[Beta]", "/.", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"benMS", "[", "\[Beta]", "]"}], "\[Equal]", 
+       RowBox[{"benLS", "[", "\[Beta]", "]"}]}], ",", "\[Beta]"}], "]"}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.504745042270685*^9, 3.504745045461035*^9}, {
+  3.504745102084786*^9, 3.5047451117691936`*^9}, {3.504788328509986*^9, 
+  3.5047884078579082`*^9}}],
+
+Cell[BoxData[
+ FractionBox["160", "187"]], "Output",
+ CellChangeTimes->{
+  3.504745112556117*^9, 3.5047451537003813`*^9, {3.504745195346538*^9, 
+   3.504745205836215*^9}, 3.504788351083942*^9, {3.504788385521175*^9, 
+   3.504788408539751*^9}, 3.505330710752082*^9, 3.506539682027914*^9, 
+   3.5065397168983917`*^9, 3.537642594649446*^9, 3.569084156060742*^9, 
+   3.569084243611394*^9, 3.600258537204381*^9, 3.696091578149214*^9, 
+   3.696091752815469*^9}]
+}, Open  ]],
+
+Cell["or, solving by hand,", "Text",
+ CellChangeTimes->{{3.600259190410801*^9, 3.600259206542429*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"x1", "=", 
+  FractionBox[
+   RowBox[{"b", " ", "-", " ", 
+    RowBox[{"a", " ", 
+     RowBox[{"pMB", "[", "3", "]"}]}]}], 
+   RowBox[{"v", 
+    RowBox[{"(", 
+     RowBox[{"1", "-", 
+      RowBox[{"pMB", "[", "3", "]"}]}], ")"}]}]]}]], "Input",
+ CellChangeTimes->{{3.600259123408095*^9, 3.600259198851503*^9}}],
+
+Cell[BoxData[
+ FractionBox["160", "187"]], "Output",
+ CellChangeTimes->{3.600259170985084*^9, 3.696091578209586*^9, 
+  3.696091752868663*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"pr", "[", 
+  RowBox[{"160", "/", "187"}], "]"}]], "Input",
+ CellChangeTimes->{{3.505333593293145*^9, 3.5053336295394983`*^9}}],
+
+Cell[BoxData[
+ FractionBox["80", "187"]], "Output",
+ CellChangeTimes->{{3.5053336017121477`*^9, 3.5053336299889393`*^9}, 
+   3.506539682143321*^9, 3.50653971692682*^9, 3.537642594690178*^9, 
+   3.569084158517404*^9, 3.569084243681645*^9, 3.6002585407925367`*^9, 
+   3.6960915782594748`*^9, 3.696091752916573*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", "x1", "]"}]], "Input",
+ CellChangeTimes->{{3.504790402670259*^9, 3.5047904098198853`*^9}}],
+
+Cell[BoxData["0.8556149732620321`"], "Output",
+ CellChangeTimes->{3.50479041025272*^9, 3.505330713061796*^9, 
+  3.506539682190135*^9, 3.5065397169611483`*^9, 3.537642594910507*^9, 
+  3.569084162359262*^9, 3.569084243726637*^9, 3.696091578310061*^9, 
+  3.6960917530741*^9}]
+}, Open  ]],
+
+Cell["LS is optimal when x1 < \[Beta] < x2 with", "Text",
+ CellChangeTimes->{{3.504788425549696*^9, 3.5047884418232327`*^9}, {
+  3.505330715607047*^9, 3.5053307164530897`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"x2", "=", 
+  RowBox[{"\[Beta]", "/.", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"benLS", "[", "\[Beta]", "]"}], "\[Equal]", "0"}], ",", 
+      "\[Beta]"}], "]"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.504745042270685*^9, 3.504745045461035*^9}, {
+  3.504745102084786*^9, 3.5047451117691936`*^9}, {3.504788328509986*^9, 
+  3.5047884078579082`*^9}, {3.504788465736377*^9, 3.50478848864502*^9}}],
+
+Cell[BoxData[
+ FractionBox["12", "11"]], "Output",
+ CellChangeTimes->{
+  3.504745112556117*^9, 3.5047451537003813`*^9, {3.504745195346538*^9, 
+   3.504745205836215*^9}, 3.504788351083942*^9, {3.504788385521175*^9, 
+   3.504788408539751*^9}, {3.5047884801665907`*^9, 3.504788489399914*^9}, 
+   3.505330718953727*^9, 3.506539682393231*^9, 3.506539716996279*^9, 
+   3.537642594974608*^9, 3.569084210495776*^9, 3.5690842437767363`*^9, 
+   3.696091578361129*^9, 3.6960917531869593`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", "x2", "]"}]], "Input",
+ CellChangeTimes->{{3.504790416213915*^9, 3.504790417474435*^9}}],
+
+Cell[BoxData["1.0909090909090908`"], "Output",
+ CellChangeTimes->{3.5047904179042892`*^9, 3.505330723708364*^9, 
+  3.5065396824570427`*^9, 3.50653971706227*^9, 3.537642595054071*^9, 
+  3.5690842438263273`*^9, 3.6960915784941893`*^9, 3.696091753395042*^9}]
+}, Open  ]],
+
+Cell["Doing nothing is optimal otherwise. Thus", "Text",
+ CellChangeTimes->{{3.504788499914172*^9, 3.5047885070194807`*^9}, {
+  3.504788602814529*^9, 3.504788605780445*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pMS", "[", "2", "]"}], "=", 
+  RowBox[{"pr", "[", "x1", "]"}]}]], "Input",
+ CellChangeTimes->{{3.5047886082501907`*^9, 3.5047886307957973`*^9}, {
+  3.5053307284298363`*^9, 3.505330728536735*^9}, {3.505391985073947*^9, 
+  3.5053919876493587`*^9}, {3.696091615256868*^9, 3.696091616551034*^9}}],
+
+Cell[BoxData[
+ FractionBox["80", "187"]], "Output",
+ CellChangeTimes->{3.50478863143475*^9, 3.505330729300075*^9, 
+  3.505391991542906*^9, 3.506539682523726*^9, 3.506539717112187*^9, 
+  3.53764259513878*^9, 3.569084243877399*^9, 3.696091578561956*^9, 
+  3.696091617543726*^9, 3.696091753424225*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pLS", "[", "2", "]"}], "=", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"pr", "[", "x2", "]"}], "-", 
+    RowBox[{"pr", "[", "x1", "]"}]}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.50478863871882*^9, 3.5047886621389637`*^9}, {
+   3.505330732822824*^9, 3.505330733483757*^9}, {3.5053919999862223`*^9, 
+   3.505392007015972*^9}, 3.696091732931826*^9}],
+
+Cell[BoxData[
+ FractionBox["2", "17"]], "Output",
+ CellChangeTimes->{3.504788663460801*^9, 3.505330734959062*^9, 
+  3.505392007583704*^9, 3.506539682608493*^9, 3.506539717162408*^9, 
+  3.537642595295802*^9, 3.569084243926238*^9, 3.696091578613007*^9, 
+  3.696091753489448*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"pMB", "[", "2", "]"}], "=", 
+   RowBox[{"pMS", "[", "2", "]"}]}], ";", " ", 
+  RowBox[{
+   RowBox[{"pLB", "[", "2", "]"}], "=", 
+   RowBox[{"pLS", "[", "2", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.504791032687114*^9, 3.50479107306533*^9}, {
+  3.5053307385416*^9, 3.50533074541157*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["1 share in book", "Subsection",
+ CellChangeTimes->{{3.50539154287423*^9, 3.505391545837654*^9}}],
+
+Cell["\<\
+If the ask side of the book has quantity, a limit sell order placed at t-2 \
+will not be executed so the problem reduces to the step-3 case.  MS if \
+\[Beta] < 10/11.  It follows that we need to increase the size of the state \
+space to include quantity on the ask side of the book.\
+\>", "Text",
+ CellChangeTimes->{{3.504790328371728*^9, 3.504790361412569*^9}, {
+  3.504790441346717*^9, 3.5047904459923773`*^9}, {3.504790588263165*^9, 
+  3.504790663977222*^9}, {3.505330764511318*^9, 3.50533076488787*^9}, {
+  3.56909100720187*^9, 3.56909106929697*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Expand notation", "Subsection",
+ CellChangeTimes->{{3.50539180224963*^9, 3.505391804766575*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"pMS", "[", 
+     RowBox[{"0", ",", "0"}], "]"}], "[", "2", "]"}], "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"pMB", "[", 
+      RowBox[{"0", ",", "0"}], "]"}], "[", "2", "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"pMS", "[", 
+       RowBox[{"1", ",", "0"}], "]"}], "[", "2", "]"}], "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"pMB", "[", 
+        RowBox[{"0", ",", "1"}], "]"}], "[", "2", "]"}], "=", 
+      FractionBox["40", "187"]}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.505391819543185*^9, 3.505391850978489*^9}, {
+   3.5053918818503237`*^9, 3.505391893730906*^9}, {3.5053919692601223`*^9, 
+   3.505391969394394*^9}, {3.505392064229149*^9, 3.50539208124426*^9}, {
+   3.505412472693798*^9, 3.505412495908149*^9}, {3.537642640522461*^9, 
+   3.537642651440325*^9}, 3.569091155662136*^9, 3.569091865581421*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"pLS", "[", 
+     RowBox[{"0", ",", "0"}], "]"}], "[", "2", "]"}], "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"pLB", "[", 
+      RowBox[{"0", ",", "0"}], "]"}], "[", "2", "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"pLS", "[", 
+       RowBox[{"1", ",", "0"}], "]"}], "[", "2", "]"}], "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"pLB", "[", 
+        RowBox[{"0", ",", "1"}], "]"}], "[", "2", "]"}], "=", 
+      FractionBox["1", "17"]}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.505391819543185*^9, 3.505391850978489*^9}, {
+   3.5053918818503237`*^9, 3.505391893730906*^9}, {3.5053919692601223`*^9, 
+   3.505391969394394*^9}, {3.505392064229149*^9, 3.505392093483419*^9}, 
+   3.505412591248947*^9, {3.569092165043623*^9, 3.569092195239073*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"pLS", "[", 
+     RowBox[{"0", ",", "1"}], "]"}], "[", "2", "]"}], "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"pLB", "[", 
+      RowBox[{"0", ",", "1"}], "]"}], "[", "2", "]"}], "=", "0"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.56909222183716*^9, 3.569092230072693*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"pMS", "[", 
+     RowBox[{"0", ",", "1"}], "]"}], "[", "2", "]"}], "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"pMB", "[", 
+      RowBox[{"1", ",", "0"}], "]"}], "[", "2", "]"}], "=", 
+    FractionBox["5", "22"]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.505391819543185*^9, 3.505391850978489*^9}, {
+   3.5053918818503237`*^9, 3.505391901824717*^9}, 3.505391966033296*^9, {
+   3.505412458869515*^9, 3.5054124662777863`*^9}, {3.505412661380686*^9, 
+   3.505412662363758*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"pLB", "[", 
+     RowBox[{"0", ",", "1"}], "]"}], "[", "2", "]"}], "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"pMB", "[", 
+      RowBox[{"1", ",", "0"}], "]"}], "[", "2", "]"}], "=", 
+    FractionBox["5", "22"]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.505391819543185*^9, 3.505391850978489*^9}, {
+   3.5053918818503237`*^9, 3.505391901824717*^9}, 3.505391966033296*^9, {
+   3.505412458869515*^9, 3.5054124662777863`*^9}, {3.505412661380686*^9, 
+   3.505412662363758*^9}, {3.5690921275060673`*^9, 3.569092131427046*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"pMS", "[", 
+    RowBox[{"0", ",", "0"}], "]"}], "[", "2", "]"}], "+", 
+  RowBox[{
+   RowBox[{"pMB", "[", 
+    RowBox[{"0", ",", "0"}], "]"}], "[", "2", "]"}], "+", 
+  RowBox[{
+   RowBox[{"pLS", "[", 
+    RowBox[{"0", ",", "0"}], "]"}], "[", "2", "]"}], "+", 
+  RowBox[{
+   RowBox[{"pLB", "[", 
+    RowBox[{"0", ",", "0"}], "]"}], "[", "2", "]"}]}]], "Input",
+ CellChangeTimes->{{3.569091892669786*^9, 3.5690919466550617`*^9}, {
+  3.569091997507648*^9, 3.569092004683634*^9}}],
+
+Cell[BoxData[
+ FractionBox["6", "11"]], "Output",
+ CellChangeTimes->{{3.56909194732041*^9, 3.569091956298671*^9}, 
+   3.569092005495573*^9, 3.696091578771777*^9, 3.696091753604621*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"pMS", "[", 
+    RowBox[{"0", ",", "1"}], "]"}], "[", "2", "]"}], "+", 
+  RowBox[{
+   RowBox[{"pMB", "[", 
+    RowBox[{"0", ",", "1"}], "]"}], "[", "2", "]"}], "+", 
+  RowBox[{
+   RowBox[{"pLS", "[", 
+    RowBox[{"0", ",", "1"}], "]"}], "[", "2", "]"}], "+", 
+  RowBox[{
+   RowBox[{"pLB", "[", 
+    RowBox[{"0", ",", "1"}], "]"}], "[", "2", "]"}]}]], "Input",
+ CellChangeTimes->{{3.569092086271091*^9, 3.5690921111165733`*^9}}],
+
+Cell[BoxData[
+ FractionBox["125", "187"]], "Output",
+ CellChangeTimes->{3.569092111681794*^9, 3.5690922019075127`*^9, 
+  3.569092234159094*^9, 3.696091578827342*^9, 3.696091753630987*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Compute probablities of events at t=1", "Section",
+ CellChangeTimes->{{3.504787638731792*^9, 3.504787639952961*^9}, {
+   3.504789188488739*^9, 3.504789188609766*^9}, {3.50479068794491*^9, 
+   3.5047906886471786`*^9}, {3.569080993822856*^9, 3.5690809966228447`*^9}, {
+   3.5690908893842163`*^9, 3.569090896539186*^9}, 3.600262285760816*^9}],
+
+Cell["\<\
+By assumption this is the first step so there is no quantity in the order \
+book.  Again assume a seller.\
+\>", "Text",
+ CellChangeTimes->{{3.504787867471199*^9, 3.5047878918060207`*^9}, {
+  3.5047882833062983`*^9, 3.5047882914418488`*^9}, {3.50478958919256*^9, 
+  3.504789662580202*^9}, {3.5047908348099833`*^9, 3.5047908873504*^9}, {
+  3.505391627416234*^9, 3.505391640422888*^9}, {3.505412229734564*^9, 
+  3.5054122364777822`*^9}, {3.537642417324932*^9, 3.537642425498143*^9}}],
+
+Cell["\<\
+If trader places LS at t=1, the book will be (0,1) at t=2.  The probability \
+of a market buy at times t = 2 or t = 3 is then given by:\
+\>", "Text",
+ CellChangeTimes->{{3.505412242050939*^9, 3.505412336553101*^9}, {
+  3.506539770537722*^9, 3.506539794230752*^9}, {3.506540032102206*^9, 
+  3.5065400326910563`*^9}, {3.5376424289062233`*^9, 3.537642429746585*^9}, {
+  3.537642494918191*^9, 3.537642506125355*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pFill", "[", "1", "]"}], "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"pMB", "[", 
+     RowBox[{"0", ",", "1"}], "]"}], "[", "2", "]"}], "+", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"1", "-", 
+      RowBox[{
+       RowBox[{"pMB", "[", 
+        RowBox[{"0", ",", "1"}], "]"}], "[", "2", "]"}]}], ")"}], "*", 
+    RowBox[{"pMB", "[", "3", "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.50541236537074*^9, 3.505412432817778*^9}, {
+  3.505412548066799*^9, 3.505412552330893*^9}, {3.505412694651627*^9, 
+  3.5054127029371557`*^9}, {3.506539645639668*^9, 3.506539653300563*^9}, {
+  3.5065397742334213`*^9, 3.506539787585486*^9}, {3.5065420973327103`*^9, 
+  3.5065420982492313`*^9}, {3.5376425124718857`*^9, 3.53764255091746*^9}}],
+
+Cell[BoxData[
+ FractionBox["95", "242"]], "Output",
+ CellChangeTimes->{
+  3.505412553249559*^9, {3.505412683554552*^9, 3.505412703493704*^9}, 
+   3.506539717308968*^9, 3.5065397972504272`*^9, 3.50654210443839*^9, 
+   3.537642595645067*^9, 3.537642657462434*^9, 3.569092287812191*^9, 
+   3.696091578899302*^9, 3.696091753687366*^9}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"benLS", "[", "\[Beta]_", "]"}], "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"a", "-", 
+      RowBox[{"\[Beta]", " ", "v"}]}], ")"}], 
+    RowBox[{"pFill", "[", "1", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"benMS", "[", "\[Beta]_", "]"}], "=", 
+   RowBox[{"b", "-", 
+    RowBox[{"\[Beta]", " ", "v"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.504787838876472*^9, 3.504787864660088*^9}, {
+  3.504787897662956*^9, 3.504787965380425*^9}, {3.504788020707375*^9, 
+  3.5047880302809*^9}, {3.5047885736590033`*^9, 3.5047885748165913`*^9}, {
+  3.504791080555739*^9, 3.504791086672291*^9}, {3.5053916689814377`*^9, 
+  3.505391669589266*^9}, {3.505412712994396*^9, 3.505412714934444*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"benLS", "[", "\[Beta]", "]"}], ",", 
+     RowBox[{"benMS", "[", "\[Beta]", "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Beta]", ",", "0", ",", "2"}], "}"}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Red", ",", "Blue"}], "}"}]}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"-", "1"}], ",", "5"}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.504787969209599*^9, 3.5047880147539988`*^9}, {
+  3.504788702638431*^9, 3.5047887234195137`*^9}, {3.5376476304821873`*^9, 
+  3.537647631001713*^9}, {3.5690923415929947`*^9, 3.5690923459909973`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{{}, {}, 
+    TagBox[
+     {RGBColor[1, 0, 0], AbsoluteThickness[1.6], Opacity[1.], 
+      LineBox[CompressedData["
+1:eJwB8QIO/SFib1JlAgAAAC4AAAACAAAASmXo0cDpZT5nvkstzdcCQARDGnDf
+GUQ/e+Gb0hbVAkAzn5icsxlUP5AE7Hdg0gJAS83Xsp0ZZD+5SozC88wCQFdk
+972SGXQ/DNfMVxrCAkDdL4dDjRmEP7DvTYJnrAJAoBVPhooZlD/7IFDXAYEC
+QIEIsyeJGaQ/joNUgTYqAkBYWaGv8PG0P6Lwi+QFbgFAC/+BXEcevz+j3+Hc
+Tb4AQCVR7ujDi8Q/5QexPQgSAEB3zjk/mPTJPyewXVtRrv4/F7QR3gEBzz9b
+VJZlg1H9P7biQ8zPPNI/aUgsjoHX+z/Cap0bWezUP/iutIdkZPo/9SY9D61t
+1z9jGXqrOAr5PwL5qxAbJdo/pdOc7diS9z82/2C2U67cP8CR/FlqNPY/zIQ0
+zsYq3z9fwk6X4Nz0Px+Q6/mp7uA/1EL+8iJo8z/r99/e1TDiPyTH6nhWDPI/
+pOq7yg6O4z9KmzQdVpPwPw4dp+/k5OQ/68PhJHVC7j+MabVmoCTmP/JY1GMg
+kOs/9kCr5Gh/5z+qjYHfY6PoP3QyxLQWw+g/E8qor4no5T/frsSL0SHqPy6m
+irxH8+I/+2rUmyl66z9MZ1FrzwvgPytBB/5mu+w/PWAk3XKs2j9HoiFnsRfu
+P0UxG113zNQ/dx1fIuFc7z9gIwwMgaDOPyzsVQvXTfA/XXh15Tnfwz8TD/AI
+xPrwPxCYkmOnaLA/BL+bryOc8T9GDNZ/SXiVv2s0u9kJS/I/i6CoPQr4vL+r
+SWKgvvbyP/RKGobaEcq/9esaEOaW8z9vE7xNE3DSv7VTRwOURPQ/AcL13ghM
+2L9/SIWftOb0PzBhO8c5xN2/Id1K2KOF9T8jm9u1a5Dhvzo3hJQZMvY/BeZe
+SyJ55L9cHs/5AdP2Py0paIz2L+e/9cqN4nCB9z+pzLaQMiHqv5gEXnRSJPg/
+dGiLQIzg7L8T3rWiAsT4Pzkfe04cku+/BkjyV3Xd+D8AAAAAAADwv9ABchk=
+
+       "]]},
+     Annotation[#, "Charting`Private`Tag$2343#1"]& ], 
+    TagBox[
+     {RGBColor[0, 0, 1], AbsoluteThickness[1.6], Opacity[1.], 
+      LineBox[CompressedData["
+1:eJwBMQLO/SFib1JlAgAAACIAAAACAAAASmXo0cDpZT5wS+/w//8TQARDGnDf
+GUQ/fLuYjYv8E0Azn5icsxlUP4krQioX+RNAS83Xsp0ZZD+jC5VjLvITQFdk
+972SGXQ/1ss61lzkE0DdL4dDjRmEPzxMhru5yBNAoBVPhooZlD8JTR2Gc5ET
+QIEIsyeJGaQ/ok5LG+ciE0BYWaGv8PG0P1Ii6FA1MxJAC/+BXEcevz8V1Aze
+ZVMRQCVR7ujDi8Q/Dgr3U/p3EEB3zjk/mPTJPwchRKrrEw9AF7QR3gEBzz8Y
+6qlbp1cNQLbiQ8zPPNI/I1SRIzF2C0DCap0bWezUP5rGA72CnQlA9SY9D61t
+1z849YUFmeQHQAL5qxAbJdo/z8SJZH0GBkA2/2C2U67cP4tQnXImSARAzIQ0
+zsYq3z+05DtSl5ICQB+Q6/mp7uA/1RlcSNa3AEDr99/e1TDiPzoWGNuz+f0/
+pOq7yg6O4z+8OntSVzn6Pw4dp+/k5OQ/GnD0bIqK9j+MabVmoCTmP8AdjeVG
+G/M/9kCr5Gh/5z+4GlIWP8PuP3QyxLQWw+g/gOrIHQPP5z/frsSL0SHqPzg+
+Rn//ReA/+2rUmyl66z8wZ99NNsDRPytBB/5mu+w/AJmBrZiUrz9HoiFnsRfu
+PyDy49w+Cca/dx1fIuFc7z8gRBZ6rP3YvyzsVQvXTfA/4CWxfD1Y478TD/AI
+xPrwP9ClUGJsxuq/dNFFF1108T8AAAAAAADwvwTVAPQ=
+       "]]},
+     Annotation[#, "Charting`Private`Tag$2343#2"]& ]}, {}, {}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, "DefaultMeshStyle" -> 
+    AbsolutePointSize[6], "ScalingFunctions" -> None, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0., 1.9999999591836735`}, {-1, 5}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {0, 0}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{{3.5047880159957333`*^9, 3.50478803374713*^9}, 
+   3.504788580292288*^9, 3.504788724083856*^9, 3.505412730647564*^9, 
+   3.5065397173587437`*^9, 3.5065398042802258`*^9, 3.537642596227663*^9, 
+   3.537642678964602*^9, 3.537647631917367*^9, 3.569092346637389*^9, 
+   3.696091579017069*^9, 3.696091753842201*^9}]
+}, Open  ]],
+
+Cell["So, MS when \[Beta] < x1 with", "Text",
+ CellChangeTimes->{{3.5047882349809017`*^9, 3.504788259192313*^9}, 
+   3.504788403249981*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"x1", "=", 
+  RowBox[{"\[Beta]", "/.", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"benMS", "[", "\[Beta]", "]"}], "\[Equal]", 
+       RowBox[{"benLS", "[", "\[Beta]", "]"}]}], ",", "\[Beta]"}], "]"}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.504745042270685*^9, 3.504745045461035*^9}, {
+  3.504745102084786*^9, 3.5047451117691936`*^9}, {3.504788328509986*^9, 
+  3.5047884078579082`*^9}, {3.5054127500552893`*^9, 3.505412752526559*^9}, {
+  3.5690923591818113`*^9, 3.5690923682682133`*^9}}],
+
+Cell[BoxData[
+ FractionBox["1280", "1617"]], "Output",
+ CellChangeTimes->{
+  3.504745112556117*^9, 3.5047451537003813`*^9, {3.504745195346538*^9, 
+   3.504745205836215*^9}, 3.504788351083942*^9, {3.504788385521175*^9, 
+   3.504788408539751*^9}, {3.505412743890369*^9, 3.505412752913978*^9}, 
+   3.5065397173928556`*^9, 3.50653980845002*^9, 3.537642596330763*^9, 
+   3.537642685423606*^9, {3.569092353081498*^9, 3.569092368706306*^9}, 
+   3.69609157909691*^9, 3.696091753870118*^9}]
+}, Open  ]],
+
+Cell["LS is optimal when x1 < \[Beta] < x2 with", "Text",
+ CellChangeTimes->{{3.504788425549696*^9, 3.5047884418232327`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"x2", "=", 
+  RowBox[{"\[Beta]", "/.", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"benLS", "[", "\[Beta]", "]"}], "\[Equal]", "0"}], ",", 
+      "\[Beta]"}], "]"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.504745042270685*^9, 3.504745045461035*^9}, {
+  3.504745102084786*^9, 3.5047451117691936`*^9}, {3.504788328509986*^9, 
+  3.5047884078579082`*^9}, {3.504788465736377*^9, 3.50478848864502*^9}, {
+  3.5054127592153587`*^9, 3.505412761949953*^9}, {3.569092374756439*^9, 
+  3.569092379515921*^9}}],
+
+Cell[BoxData[
+ FractionBox["12", "11"]], "Output",
+ CellChangeTimes->{
+  3.504745112556117*^9, 3.5047451537003813`*^9, {3.504745195346538*^9, 
+   3.504745205836215*^9}, 3.504788351083942*^9, {3.504788385521175*^9, 
+   3.504788408539751*^9}, {3.5047884801665907`*^9, 3.504788489399914*^9}, 
+   3.50541276233911*^9, 3.506539720906041*^9, 3.506539813019575*^9, 
+   3.53764259654611*^9, 3.5376427039526787`*^9, 3.5690923800073013`*^9, 
+   3.696091579164422*^9, 3.696091753901792*^9}]
+}, Open  ]],
+
+Cell["Doing nothing is optimal otherwise. Thus", "Text",
+ CellChangeTimes->{{3.504788499914172*^9, 3.5047885070194807`*^9}, {
+  3.504788602814529*^9, 3.504788605780445*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pMS", "[", "1", "]"}], "=", 
+  RowBox[{
+   FractionBox["1", "2"], 
+   RowBox[{"pr", "[", "x1", "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.5047886082501907`*^9, 3.5047886307957973`*^9}, {
+  3.505412947683196*^9, 3.505412952947219*^9}}],
+
+Cell[BoxData[
+ FractionBox["320", "1617"]], "Output",
+ CellChangeTimes->{3.50478863143475*^9, 3.505412953847625*^9, 
+  3.506539721069121*^9, 3.506539817356906*^9, 3.537642596681217*^9, 
+  3.5376427124497223`*^9, 3.569092389205298*^9, 3.696091579228179*^9, 
+  3.696091753968231*^9}]
+}, Open  ]],
+
+Cell["\<\
+which is the probability trader 1 being a seller times the probability of MS \
+given that time 1 trader is a seller.\
+\>", "Text",
+ CellChangeTimes->{{3.5376427584743443`*^9, 3.5376428113712378`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pLS", "[", "1", "]"}], "=", 
+  RowBox[{
+   FractionBox["1", "2"], 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"pr", "[", "x2", "]"}], "-", 
+     RowBox[{"pr", "[", "x1", "]"}]}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.50478863871882*^9, 3.5047886621389637`*^9}, {
+  3.505412964380822*^9, 3.505412973345416*^9}}],
+
+Cell[BoxData[
+ FractionBox["11", "147"]], "Output",
+ CellChangeTimes->{
+  3.504788663460801*^9, {3.505412968107193*^9, 3.505412975306785*^9}, 
+   3.506539721118011*^9, 3.5065398200505953`*^9, 3.5376425968745813`*^9, 
+   3.5376428164525757`*^9, 3.569092862810663*^9, 3.69609157929633*^9, 
+   3.6960917540357313`*^9}]
+}, Open  ]],
+
+Cell["same story as previous line.", "Text",
+ CellChangeTimes->{{3.537642824362376*^9, 3.537642831032476*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Expected book size", "Section",
+ CellChangeTimes->{{3.505413030120278*^9, 3.505413040241338*^9}}],
+
+Cell["\<\
+Sell quantity at t = 2 is given by probability of LS at t = 1.\
+\>", "Text",
+ CellChangeTimes->{{3.505413057024757*^9, 3.505413100958193*^9}, {
+  3.505413131436778*^9, 3.5054131339942102`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"eS", "[", "2", "]"}], "=", 
+  RowBox[{"pLS", "[", "1", "]"}]}]], "Input",
+ CellChangeTimes->{{3.5054131095585327`*^9, 3.505413118492978*^9}}],
+
+Cell[BoxData[
+ FractionBox["11", "147"]], "Output",
+ CellChangeTimes->{3.5054131245576982`*^9, 3.506539721179936*^9, 
+  3.50653982380434*^9, 3.537642597068447*^9, 3.537642862640327*^9, 
+  3.56909289175506*^9, 3.696091579344022*^9, 3.696091754101603*^9}]
+}, Open  ]],
+
+Cell["\<\
+Sell quantity at t = 3 is given by probability of LS at t = 1 plus \
+probability of LS at t=2 (which means there was no limit sell at t=1.\
+\>", "Text",
+ CellChangeTimes->{{3.505413057024757*^9, 3.505413100958193*^9}, {
+  3.505413131436778*^9, 3.5054131859192457`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"es", "[", "3", "]"}], "=", 
+  RowBox[{
+   RowBox[{"pLS", "[", "1", "]"}], "+", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"1", "-", 
+      RowBox[{"pLS", "[", "1", "]"}]}], ")"}], 
+    RowBox[{
+     RowBox[{"pLS", "[", 
+      RowBox[{"0", ",", "0"}], "]"}], "[", "2", "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.5054131900352917`*^9, 3.5054132314933662`*^9}}],
+
+Cell[BoxData[
+ FractionBox["19", "147"]], "Output",
+ CellChangeTimes->{3.5054132324559593`*^9, 3.506539721217496*^9, 
+  3.506539836675802*^9, 3.537642597125456*^9, 3.537642903423967*^9, 
+  3.569092913973722*^9, 3.696091579393476*^9, 3.696091754172051*^9}]
+}, Open  ]],
+
+Cell["\<\
+These computations appear to agree with Hasbrouck Figure 12.2\
+\>", "Text",
+ CellChangeTimes->{{3.505413238434939*^9, 3.505413256363462*^9}, {
+  3.5054133423967247`*^9, 3.5054133429332037`*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1243, 766},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+PrintingCopies->1,
+PrintingPageRange->{1, Automatic},
+PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> False}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[422, 15, 106, 1, 92, "Title"],
+Cell[531, 18, 150, 2, 51, "Subtitle"],
+Cell[CellGroupData[{
+Cell[706, 24, 96, 1, 64, "Section"],
+Cell[805, 27, 283, 7, 32, "Input"],
+Cell[CellGroupData[{
+Cell[1113, 38, 368, 10, 32, "Input"],
+Cell[1484, 50, 1810, 49, 55, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3331, 104, 420, 11, 32, "Input"],
+Cell[3754, 117, 1868, 51, 71, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5671, 174, 349, 4, 64, "Section"],
+Cell[6023, 180, 321, 6, 30, "Text"],
+Cell[6347, 188, 169, 3, 30, "Text"],
+Cell[CellGroupData[{
+Cell[6541, 195, 144, 3, 32, "Input"],
+Cell[6688, 200, 380, 6, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7105, 211, 143, 3, 32, "Input"],
+Cell[7251, 216, 324, 4, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7612, 225, 339, 9, 49, "Input"],
+Cell[7954, 236, 354, 6, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8345, 247, 273, 6, 32, "Input"],
+Cell[8621, 255, 350, 6, 44, "Output"]
+}, Open  ]],
+Cell[8986, 264, 124, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[9135, 269, 335, 8, 32, "Input"],
+Cell[9473, 279, 381, 6, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9891, 290, 233, 6, 32, "Input"],
+Cell[10127, 298, 340, 7, 32, "Output"]
+}, Open  ]],
+Cell[10482, 308, 134, 1, 30, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10653, 314, 295, 4, 64, "Section"],
+Cell[CellGroupData[{
+Cell[10973, 322, 98, 1, 44, "Subsection"],
+Cell[11074, 325, 440, 8, 49, "Text"],
+Cell[11517, 335, 667, 17, 54, "Input"],
+Cell[CellGroupData[{
+Cell[12209, 356, 946, 24, 32, "Input"],
+Cell[13158, 382, 3870, 79, 249, "Output"]
+}, Open  ]],
+Cell[17043, 464, 209, 2, 30, "Text"],
+Cell[CellGroupData[{
+Cell[17277, 470, 474, 12, 32, "Input"],
+Cell[17754, 484, 455, 8, 45, "Output"]
+}, Open  ]],
+Cell[18224, 495, 102, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[18351, 500, 333, 10, 53, "Input"],
+Cell[18687, 512, 141, 3, 45, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18865, 520, 150, 3, 32, "Input"],
+Cell[19018, 525, 312, 5, 45, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19367, 535, 123, 2, 32, "Input"],
+Cell[19493, 539, 272, 4, 32, "Output"]
+}, Open  ]],
+Cell[19780, 546, 176, 2, 30, "Text"],
+Cell[CellGroupData[{
+Cell[19981, 552, 478, 11, 32, "Input"],
+Cell[20462, 565, 481, 8, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20980, 578, 121, 2, 32, "Input"],
+Cell[21104, 582, 255, 3, 32, "Output"]
+}, Open  ]],
+Cell[21374, 588, 173, 2, 30, "Text"],
+Cell[CellGroupData[{
+Cell[21572, 594, 327, 6, 32, "Input"],
+Cell[21902, 602, 298, 5, 45, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22237, 612, 381, 9, 32, "Input"],
+Cell[22621, 623, 276, 5, 44, "Output"]
+}, Open  ]],
+Cell[22912, 631, 340, 9, 32, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23289, 645, 102, 1, 44, "Subsection"],
+Cell[23394, 648, 564, 9, 49, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23995, 662, 102, 1, 44, "Subsection"],
+Cell[24100, 665, 895, 23, 50, "Input"],
+Cell[24998, 690, 822, 22, 49, "Input"],
+Cell[25823, 714, 336, 11, 32, "Input"],
+Cell[26162, 727, 534, 14, 49, "Input"],
+Cell[26699, 743, 582, 14, 49, "Input"],
+Cell[CellGroupData[{
+Cell[27306, 761, 522, 15, 32, "Input"],
+Cell[27831, 778, 184, 3, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28052, 786, 473, 14, 32, "Input"],
+Cell[28528, 802, 187, 3, 45, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28776, 812, 345, 4, 64, "Section"],
+Cell[29124, 818, 490, 8, 30, "Text"],
+Cell[29617, 828, 422, 7, 30, "Text"],
+Cell[CellGroupData[{
+Cell[30064, 839, 756, 18, 32, "Input"],
+Cell[30823, 859, 331, 6, 44, "Output"]
+}, Open  ]],
+Cell[31169, 868, 767, 18, 54, "Input"],
+Cell[CellGroupData[{
+Cell[31961, 890, 721, 18, 32, "Input"],
+Cell[32685, 910, 3759, 77, 246, "Output"]
+}, Open  ]],
+Cell[36459, 990, 139, 2, 30, "Text"],
+Cell[CellGroupData[{
+Cell[36623, 996, 575, 13, 32, "Input"],
+Cell[37201, 1011, 481, 8, 45, "Output"]
+}, Open  ]],
+Cell[37697, 1022, 125, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[37847, 1027, 578, 13, 32, "Input"],
+Cell[38428, 1042, 479, 8, 44, "Output"]
+}, Open  ]],
+Cell[38922, 1053, 173, 2, 30, "Text"],
+Cell[CellGroupData[{
+Cell[39120, 1059, 269, 7, 49, "Input"],
+Cell[39392, 1068, 281, 5, 45, "Output"]
+}, Open  ]],
+Cell[39688, 1076, 210, 4, 30, "Text"],
+Cell[CellGroupData[{
+Cell[39923, 1084, 350, 10, 49, "Input"],
+Cell[40276, 1096, 315, 6, 44, "Output"]
+}, Open  ]],
+Cell[40606, 1105, 110, 1, 30, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40753, 1111, 103, 1, 80, "Section"],
+Cell[40859, 1114, 203, 4, 30, "Text"],
+Cell[CellGroupData[{
+Cell[41087, 1122, 176, 4, 32, "Input"],
+Cell[41266, 1128, 253, 4, 44, "Output"]
+}, Open  ]],
+Cell[41534, 1135, 279, 5, 30, "Text"],
+Cell[CellGroupData[{
+Cell[41838, 1144, 396, 12, 32, "Input"],
+Cell[42237, 1158, 255, 4, 44, "Output"]
+}, Open  ]],
+Cell[42507, 1165, 204, 4, 30, "Text"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
