@@ -104,6 +104,10 @@ Homework 6 is related to this lecture.
     - Permanent but state-dependent (Lillo)
     - Transient (Bouchaud)
  - Both of these formulations are equivalent.
+ - To get quantitative (as opposed to qualitative) agreement with observation, in principle we need to take into account
+    - Time-varying liquidity
+    - Limit orders and cancelations
+ - In practice, it seems (see Taranto) that distinguishing between market orders that change the price and orders that result in no price change is enough for a surprisingly accurate description of market impact.
 
 Homework 7 is related to this lecture.
 
