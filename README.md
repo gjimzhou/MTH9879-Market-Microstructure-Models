@@ -98,11 +98,11 @@ Homework 6 is related to this lecture.
 ### Lecture 7: Long memory of order flow and market impact
 
  - Order flow is a long memory process.
-    - The dominant effect is order-splitting.
+    - The dominant effect is order-splitting.
  - Market impact is concave due to selective liquidity taking.
  - Market impact of market orders can be modeled as:
-    - Permanent but state-dependent (Lillo)
-    - Transient (Bouchaud)
+    - Permanent but state-dependent (Lillo)
+    - Transient (Bouchaud)
  - Both of these formulations are equivalent.
 
 Homework 7 is related to this lecture.
