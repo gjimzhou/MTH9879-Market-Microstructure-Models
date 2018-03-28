@@ -112,3 +112,7 @@ Homework 6 is related to this lecture.
 Homework 7 is related to this lecture.
 
 
+
+### Undergraduate Version
+
+The undergraduate version of this course is a series of selected topic in market microstructure and is taught by Prof. Tai-ho Wang at Peking University. This folder contains homeworks and solutions of this course.
