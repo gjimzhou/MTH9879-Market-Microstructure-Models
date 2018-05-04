@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Lightening Presentation Speech}
+\author{Junliang Zhou}
+
+\begin{document}
+\maketitle
+
+Hello everyone. I am Jimmy and this is my partner Likun. \newline
+
+Today we are presenting an enhanced LLOB model developed by Benzaquen and Bouchaud. Jim told me today that he had never made to understand this model. And I hope this presentation would make a difference. By introducing multi-timescale market agents, the model resolves several deficiencies of the original LLOB model in order to make it more consistent with the real market behavior. \newline
+
+I believe everyone here is quite familiar with LLOB model. And if you weren't before, you should be now. The shape of the stationary order book is shown in Figure 1. \newline
+
+Although the LLOB model has successfully provided a theoretical approach of modeling the square-root impact law. There are several drawbacks of it. \newline
+
+First, the original model mainly focus on the infinite memory limit, where the cancellation and deposition rates both go to zero. \newline
+
+Second, the square-root law is only recovered when execution rate of meta-orders is extremely large, even larger than the execution rate of market itself. \newline
+
+Third, it induces a strong mean-reversion effect which is not observed in real prices. This is referred to the "diffusivity puzzle". \newline
+
+Now let's tackle these problems one by one. \newline
+
+For the order book with finite memory and the cancellation and deposition rates are non-trivial, there are multiple situations to consider: the participation rate of meta-order, the execution speed, and the meta-order volume. \newline
+
+Market impact has different profiles under different situations. When the execution is fast and the volume is small, we can recover a square-root impact with cancellation rate as a variable. And for the opposite situation, there is a linear market impact. The results are shown in Figure 2. \newline
+
+From Figure 2 we see that, for small and fast meta-orders, the second term of the price trajectory offsets some of the market impact and it's proportional to the cancellation rate. The reasons that lead to both the correction term and the linear impact are actually the same. \newline
+
+As the cancellation and deposition rates increase comparing to the execution rate, the order book essentially renews itself faster and the information brought by the meta-order will be lost during or after the execution of meta-order. Then it is not surprising that a permanent impact would be found in the price trajectories. And we can show that it's linear to the meta-order size. \newline
+
+Now we are going to see how the square-root market impact is achieved when the meta-order participation rate is much smaller than that of the market by introducing a double-frequency framework. \newline
+
+Consider there are two sorts of agents co-exists in the market. One is slow agent like normal investors. And the other is fast agent like HFTs, market makers, and people from Jump's. Clearly the market turnover is dominated by the latter one. \newline
+
+We can solve the stationary order book shape for each kind of agents. The slow one is a linear function, and the fast one is a stepwise function. They are just like two different limits of the LLOB order book we've seen before. Therefore the total order book shape is the red/blue line shown in Figure 3. \newline
+
+Let's consider the meta-order intensity is in between of the slow and fast agents. We can solve the meta-order participation rates for both kinds of agents and the price trajectory. The results are shown in Figure 4. \newline
+
+The result suggests that the incoming meta-order is executed mainly by fast agents at the beginning, but the slow agents will then take over gradually. Due to the different nature of order books of two types of agents, that one is stepwise and the other is linear, the market impact is linear when the fast agents are dominating at the beginning, and then becomes square-root when the slow agents are taking over. \newline
+
+Therefore we successfully recovered the square-root law for a reasonable scale of meta-order intensity that is compatible with real market. \newline
+
+We can furthermore extend the model to a multi-frequency framework. The setup is quite similar to that of the double-frequency one. The only difference is the cancellation and deposition rates are now continuously distributed. \newline
+
+Here we mainly focus on the resolution of the so-called "diffusivity puzzle". The price diffusion in original LLOB model converges as time goes, which leads to a strong mean-reverting effect. By introducing a fat-tailed distribution, typically a power-law distribution, to the cancellation rate, the price diffusion becomes divergent. \newline
+
+That is, the mean-reversion effects induced by a persistent order book can be exactly offset by the trending effects induced by a persistent order flow. And then resolved the "diffusivity puzzle". \newline
+
+Also we can see from Figure 5 that the price trajectory in the multi-timescale framework is quite similar to that in the double-frequency one. The market impact follows a power law with order of 3/4 and 5/8 respectively. \newline
+
+To sum up, the authors modified the origin LLOB by introducing multi-timescale agents to make the model more consistent with the real market data, especially with the square-root market impact and diffusive price. \newline
+
+Thank you for your attention! And if you have any questions, please don't hesitate to ask. \newline
+
+\end{document}
