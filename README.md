@@ -116,3 +116,7 @@ Homework 7 is related to this lecture.
 ### Undergraduate Version
 
 The undergraduate version of this course is a series of selected topic in market microstructure and is taught by Prof. Tai-ho Wang at Peking University. This folder contains homeworks and solutions of this course.
+
+## License and course materials
+
+The existing [GPL](LICENSE) is retained for my original source-code implementation, except where otherwise noted. Course assignments, instructor material, templates and third-party data are not newly licensed here. Existing valid grants and attribution remain intact. See [NOTICE](NOTICE) and [data provenance](DATA-SOURCES.md).

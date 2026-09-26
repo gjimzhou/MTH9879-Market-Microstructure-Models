@@ -1,0 +1,16 @@
+MTH9879-Market-Microstructure-Models — rights and provenance
+
+The existing GNU GPL version 3 text in LICENSE is unchanged. It applies to Junliang Zhou's original source-code implementation except where otherwise noted. This clarification makes no new grant over instructor/course material, starter templates, third-party code or datasets without an explicit applicable license. It does not narrow any valid earlier GPL grant, including grants covering other eligible material. No new GPL "or later" designation is inferred merely from the stock license text.
+
+Notebooks mix assignment prompts, student answers and solution variants. The _Sol.ipynb and Undergraduate Version solution files require cell-level author confirmation; a filename or a student heading does not prove authorship of all cells. RvEstimators.R explicitly credits a translation of Roel's Matlab code and optimization by Jing Chen, with thanks to Tom. These credits are preserved. ziSetup.R is referenced as provided supporting code. Parlour.nb and presentation figures require separate provenance confirmation. No new ownership is asserted over these items.
+
+Academic quotation, citation, criticism and discussion remain welcome, subject to applicable rights. Public facts, mathematical methods and ideas are not proprietary. See DATA-SOURCES.md for non-code materials.
+
+This notice does not withdraw any valid permission previously granted. It does
+not restrict fair use, fair dealing, other applicable legal exceptions, or
+rights available under GitHub's platform terms. Public visibility is not a
+general reuse license or a dedication to the public domain. No ownership is
+claimed over facts, ideas, methods, mathematical principles, laws, government
+facts, or third-party trademarks. Copyright claims extend only to eligible
+original human-authored expression and selection or arrangement; AI assistance
+does not by itself establish copyright or ownership of generated material.
